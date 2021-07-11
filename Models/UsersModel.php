@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Models\MessagesModel;
+
 
 class UsersModel extends Model
 {
@@ -11,18 +13,19 @@ class UsersModel extends Model
     protected $firstname;
     protected $lastname;
     protected $picture;
+    private $message;
 
     public function __construct()
     {
         $this->table = 'users';
     }
 
-    public function getId()
+    public function getId(): int
     {
         return $this->id;
     }
 
-    public function setId($id)
+    public function setId($id): self
     {
         $this->id = $id;
 
@@ -30,12 +33,12 @@ class UsersModel extends Model
     }
 
 
-    public function getUsername()
+    public function getUsername(): string
     {
         return $this->username;
     }
 
-    public function setUsername($username)
+    public function setUsername($username): self
     {
         $this->username = $username;
 
@@ -43,12 +46,12 @@ class UsersModel extends Model
     }
 
 
-    public function getFirstname()
+    public function getFirstname(): string
     {
         return $this->firstname;
     }
 
-    public function setFirstname($firstname)
+    public function setFirstname($firstname): self
     {
         $this->firstname = $firstname;
 
@@ -56,12 +59,12 @@ class UsersModel extends Model
     }
 
 
-    public function getLastname()
+    public function getLastname(): string
     {
         return $this->lastname;
     }
 
-    public function setLastname($lastname)
+    public function setLastname($lastname): self
     {
         $this->lastname = $lastname;
 
@@ -69,17 +72,18 @@ class UsersModel extends Model
     }
 
 
-    public function getPicture()
+    public function getPicture(): string
     {
         return $this->picture;
     }
 
-    public function setPicture($picture)
+    public function setPicture($picture): self
     {
         $this->picture = $picture;
 
         return $this;
     }
+
 
 }
 
