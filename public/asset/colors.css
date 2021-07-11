@@ -1,0 +1,13 @@
+:root{
+    --bleu_clair:       #2F95AB;
+    --bleu_moyen:       #2777BC;
+    --bleu_moyen_foncé: #205f99;
+    --bleu_très_foncé:  #1b5484;
+    --bleu_message:     #0ebff6;
+    --vert_clair:       #09ec9a;
+    --vert_connecté:    #16E116;
+    --rouge_déconnecté: #FF0000;
+    --grey_message:     #6ba2d1;
+    --title:            #FFFFFF;
+    --black:            #000000;
+}
