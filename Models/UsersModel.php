@@ -13,7 +13,6 @@ class UsersModel extends Model
     protected $firstname;
     protected $lastname;
     protected $picture;
-    private $message;
 
     public function __construct()
     {

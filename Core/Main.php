@@ -16,10 +16,13 @@ class Main
 
         if ('/' === $urlPath) {
             (new MainController)->login();
-        } elseif ('/sidebar' === $urlPath) {
-            (new UsersController)->allUsers();
-        }elseif ('/chat' === $urlPath) {
+        }
+
+        elseif ('/chat' === $urlPath) {
             (new MainController)->chat();
+        }
+        elseif ('/show' === $urlPath && isset($_GET['id'])) {
+            (new MainController)->show($_GET['id']);
         }
         else {
             header('HTTP/1.1 404 Not Found');

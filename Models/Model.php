@@ -13,15 +13,16 @@ class Model extends Db
 
     public function findAll()
     {
-        $query = $this->request('SELECT * FROM '. $this->table);
+        $query = $this->request('SELECT * FROM '. $this->table .' ORDER BY username ASC');
         return $query->fetchAll();
     }
 
 
-    public function findOneById(int $id): array
+    public function find(int $id)
     {
-        return $this->request("SELECT * FROM $this->table WHERE id = $id")->fetch();
+        return $this->request("SELECT * FROM {$this->table} WHERE id = $id")->fetch();
     }
+
 
     public function create(model $model)
     {
